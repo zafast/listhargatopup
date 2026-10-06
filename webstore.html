@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Saya</title>
+    <style>
+        /* Reset CSS Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Latar Belakang menggunakan Foto Google Drive */
+        body {
+            /* Ganti ID_FOTO_GOOGLE_DRIVE_ANDA dengan ID file Google Drive Anda */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                              url('https://lh3.googleusercontent.com/d/1oi-EWOQ9OrQmJR64ams7yXX-1T1vGpCx');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #dddddd;
+        }
+
+        /* Kontainer Daftar Harga / Produk */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Kartu Produk */
+        .product-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2ec4b6;
+            margin-bottom: 15px;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #eaeaea;
+        }
+
+        /* Tombol Beli / Kontak */
+        .btn-buy {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #25d366; /* Warna WhatsApp */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-buy:hover {
+            background-color: #1eb857;
+        }
+
+        /* Bagian Kontak Admin */
+        .contact-section {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .btn-admin {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #0088cc; /* Warna Telegram/Admin */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn-admin:hover {
+            background-color: #006699;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Selamat Datang di Zafa Store TopUp Uang BUSSID</h1>
+        <p>Pilih paket terbaik sesuai kebutuhan Anda</p>
+	<p>(Suport Bussid All Versi)</p>
+    </header>
+
+    <!-- Daftar Harga / Produk -->
+    <div class="products-container">
+        
+        <div class="product-card">
+            <h2 class="product-title">Paket Hemat</h2>
+            <div class="product-price">10K s/d 40K</div>
+            <ul class="product-features">
+                <li>[ 5JT UB  ] IDR 10K</li>
+                <li>[ 10JT UB ] IDR 20K </li>
+                <li>[ 30JT UB ] IDR 40K</li>
+            </ul>
+            <a href="https://wa.me/6285727091924?text=Halo%20Admin,%20saya%20mau%20beli%20Paket%20Hemat" target="_blank" class="btn-buy">Pesan Sekarang</a>
+        </div>
+
+        <div class="product-card">
+            <h2 class="product-title">Paket Premium</h2>
+            <div class="product-price">65K s/d 100K</div>
+            <ul class="product-features">
+                <li>[ 50JT UB  ] IDR 65K</li>
+                <li>[ 150JT UB  ] IDR 80K</li>
+                <li>[ 500JT UB  ] IDR 100K</li>
+            </ul>
+            <a href="https://wa.me/6285727091924?text=Halo%20Admin,%20saya%20mau%20beli%20Paket%20Premium" target="_blank" class="btn-buy">Pesan Sekarang</a>
+        </div>
+
+        <div class="product-card">
+            <h2 class="product-title">Paket Sultan</h2>
+            <div class="product-price">250K s/d 300K</div>
+            <ul class="product-features">
+                <li>[ 1M UB  ] IDR 250K</li>
+                <li>[ 2M UB  ] IDR 300K</li>
+            </ul>
+            <a href="https://wa.me/6285727091924?text=Halo%20Admin,%20saya%20mau%20beli%20Paket%20Sultan" target="_blank" class="btn-buy">Pesan Sekarang</a>
+        </div>
+
+    </div>
+
+    <!-- Bagian Kontak Admin -->
+    <div class="contact-section">
+        <h3>Butuh Bantuan Atau Pertanyaan Khusus?</h3>
+        <p>Hubungi admin langsung untuk konsultasi gratis.</p>
+	<p>Note : Pastikan Bussid tersambung ke Facebook ( kirim Email/Nomor & Sandi Fb ). </p>
+        <!-- Ganti nomor 6281234567890 dengan nomor WhatsApp Anda -->
+        <a href="https://wa.me/6285727091924?text=Halo%20Admin,%20saya%20ingin%20bertanya" target="_blank" class="btn-admin">Hubungi Admin</a>
+    </div>
+
+</body>
+</html>
